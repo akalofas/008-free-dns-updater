@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select DNS Record</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <form id="recordSelectForm">
+    <table id="recordsTable">
+      <thead>
+        <tr>
+          <th>Select</th>
+          <th>Record ID</th>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Current Content</th>
+        </tr>
+      </thead>
+      <tbody id="recordsTableBody"></tbody>
+    </table>
+    <div id="buttonContainer">
+      <button type="button" onclick="selectRecord()">OK</button>
+      <button type="button" onclick="cancelSelection()">Cancel</button>
+    </div>
+  </form>
+  <script src="recordSelect.js"></script>
+</body>
+</html>

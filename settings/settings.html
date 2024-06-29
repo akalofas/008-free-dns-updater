@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="tabs">
+    <button class="tablink" onclick="openTab(event, 'Common')" id="defaultOpen">Common</button>
+    <button class="tablink" onclick="openTab(event, 'IPv4')" id="IPv4__Btn">IPv4</button>
+    <button class="tablink" onclick="openTab(event, 'IPv6')" id="IPv6__Btn">IPv6</button>
+  </div>
+
+  <div id="Common" class="tabcontent">
+    <form id="settingsFormCommon">
+      <label class="interval-class">
+        <span>Update Interval (minutes):</span>
+        <input type="number" id="updateInterval" name="updateInterval" min="1" required>
+      </label>
+      <label>
+        API Token:
+        <input type="text" id="apiToken" name="apiToken" required>
+      </label>
+      <label>
+        Zone ID:
+        <input type="text" id="zoneId" name="zoneId" required>
+      </label>
+    </form>
+  </div>
+
+  <div id="IPv4" class="tabcontent">
+    <form id="settingsFormIPv4">
+      <label>
+        <input type="checkbox" id="enableIPv4" name="enableIPv4"> Enable IPv4
+      </label>
+      <label id="ipv4__hidden-dns">
+        DNS Record:
+        <input type="text" id="dnsRecordIPv4" name="dnsRecord">
+      </label>
+      <label id="ipv4__hidden-record">
+        Record ID:
+        <input type="text" id="recordIdIPv4" name="recordId">
+      </label>
+      <button type="button" id="getRecordsButtonIPv4">Get IPv4 Records</button>
+    </form>
+  </div>
+
+  <div id="IPv6" class="tabcontent">
+    <form id="settingsFormIPv6">
+      <label>
+        <input type="checkbox" id="enableIPv6" name="enableIPv6"> Enable IPv6
+      </label>
+      <label id="ipv6__hidden-dns">
+        DNS Record:
+        <input type="text" id="dnsRecordIPv6" name="dnsRecord">
+      </label>
+      <label id="ipv6__hidden-record">
+        Record ID:
+        <input type="text" id="recordIdIPv6" name="recordId">
+      </label>
+      <button type="button" id="getRecordsButtonIPv6">Get IPv6 Records</button>
+    </form>
+  </div>
+
+  <div id="saveCancelContainer">
+    <button type="button" id="saveButton">Save</button>
+    <button type="button" id="cancelButton">Cancel</button>
+  </div>
+  <script src="settings.js"></script>
+</body>
+</html>

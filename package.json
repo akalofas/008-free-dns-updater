@@ -1,0 +1,49 @@
+{
+	"name": "dns-updater",
+	"author": "Angelos Kalofas",
+	"description": "Update Cloudflare DNS records with local WAN IP address",
+	"version": "1.0.0",
+	"main": "main.js",
+	"build": {
+		"icon": "app-icon.png",
+		"appId": "com.example.dns-updater",
+		"mac": {
+			"target": "dmg",
+			"category": "public.app-category.utilities",
+			"extendInfo": {
+				"LSUIElement": "1"
+			}
+		},
+		"win": {
+			"target": "nsis",
+			"icon": "app-icon.png"
+		},
+		"nsis": {
+			"oneClick": false,
+			"allowToChangeInstallationDirectory": true,
+			"createDesktopShortcut": true,
+			"createStartMenuShortcut": true
+		},
+		"files": [
+			"main.js",
+			"settings.json",
+			"settings/**/*",
+			"recordSelect/**/*",
+			"utils/**/*",
+			"icon.png",
+			"package.json"
+		]
+	},
+	"scripts": {
+		"start": "electron .",
+		"build-mac": "electron-builder --mac",
+		"build-win": "electron-builder --win"
+	},
+	"devDependencies": {
+		"electron": "^13.1.7",
+		"electron-builder": "^24.13.3"
+	},
+	"dependencies": {
+		"axios": "^0.21.1"
+	}
+}
