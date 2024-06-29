@@ -1,0 +1,15 @@
+{
+	"updateInterval": "60",
+	"zoneId": "YOUR_ZONE_ID_HERE",
+	"apiToken": "YOUR_API_TOKEN_HERE",
+	"ipv4": {
+		"enabled": false,
+		"dnsRecord": "example.com",
+		"recordId": "YOUR_RECORD_ID_HERE"
+	},
+	"ipv6": {
+		"enabled": false,
+		"dnsRecord": "example.com",
+		"recordId": "YOUR_RECORD_ID_HERE"
+	}
+}
